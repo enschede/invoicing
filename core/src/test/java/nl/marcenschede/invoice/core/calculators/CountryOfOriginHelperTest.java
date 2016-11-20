@@ -128,16 +128,6 @@ public class CountryOfOriginHelperTest {
                     public Map<String, String> getVatRegistrations() {
                         return null;
                     }
-
-                    @Override
-                    public boolean hasVatRegistrationFor(String isoOfCountryOfDestination) {
-                        return false;
-                    }
-
-                    @Override
-                    public Optional<String> getVatRegistrationInCountry(String country) {
-                        return null;
-                    }
                 };
             }
 
@@ -246,16 +236,6 @@ public class CountryOfOriginHelperTest {
 
                     @Override
                     public Map<String, String> getVatRegistrations() {
-                        return null;
-                    }
-
-                    @Override
-                    public boolean hasVatRegistrationFor(String isoOfCountryOfDestination) {
-                        return false;
-                    }
-
-                    @Override
-                    public Optional<String> getVatRegistrationInCountry(String country) {
                         return null;
                     }
                 };

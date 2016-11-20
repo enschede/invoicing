@@ -5,7 +5,6 @@ import nl.marcenschede.invoice.core.VatCalculationPolicy;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class CompanyGenerator {
     private final String primaryCountry;
@@ -33,16 +32,6 @@ public class CompanyGenerator {
             @Override
             public Map<String, String> getVatRegistrations() {
                 return vatRegistrations;
-            }
-
-            @Override
-            public boolean hasVatRegistrationFor(String isoOfcountryOfDestination) {
-                return vatRegistrations.containsKey(isoOfcountryOfDestination);
-            }
-
-            @Override
-            public Optional<String> getVatRegistrationInCountry(String country) {
-                return Optional.ofNullable(vatRegistrations.get(country));
             }
         };
     }

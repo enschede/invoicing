@@ -50,7 +50,7 @@ public class InvoiceEuB2CCalculationsDelegate extends InvoiceCalculationsDelegat
 
         Company company = invoice.getCompany();
         Boolean companyHasRegistrationInDestinationCountry =
-                company.hasVatRegistrationFor(destinationCountry);
+                company.getVatRegistrations().containsKey(destinationCountry);
 
         return companyHasRegistrationInDestinationCountry ?
                 destinationCountry : CountryOfOriginHelper.getOriginCountry(invoice);

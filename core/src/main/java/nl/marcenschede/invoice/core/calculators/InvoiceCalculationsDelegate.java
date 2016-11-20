@@ -38,7 +38,7 @@ public abstract class InvoiceCalculationsDelegate {
 
     private void validateRegistrationInOriginCountry() {
         String originCountry = CountryOfOriginHelper.getOriginCountry(invoice);
-        if (!invoice.getCompany().hasVatRegistrationFor(originCountry))
+        if (!invoice.getCompany().getVatRegistrations().containsKey(originCountry))
             throw new InvoiceImpl.NoRegistrationInOriginCountryException();
     }
 
